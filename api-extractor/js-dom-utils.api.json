@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "toolPackage": "@microsoft/api-extractor",
+    "toolVersion": "7.8.8",
+    "schemaVersion": 1003,
+    "oldestForwardsCompatibleVersion": 1001
+  },
+  "kind": "Package",
+  "canonicalReference": "@asl-19/js-dom-utils!",
+  "docComment": "/**\n * A collection of plain JavaScript DOM utility functions.\n *\n * These functions don’t rely on React, or React Native APIs.\n *\n * @packageDocumentation\n */\n",
+  "name": "@asl-19/js-dom-utils",
+  "members": [
+    {
+      "kind": "EntryPoint",
+      "canonicalReference": "@asl-19/js-dom-utils!",
+      "name": "",
+      "members": [
+        {
+          "kind": "Variable",
+          "canonicalReference": "@asl-19/js-dom-utils!focusElement:var",
+          "docComment": "/**\n * Focus a DOM element.\n *\n * @remarks\n *\n * Adds tabindex=\"-1\" to element to make it focusable (removed on blur).\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "focusElement: "
+            },
+            {
+              "kind": "Content",
+              "text": "(element: "
+            },
+            {
+              "kind": "Reference",
+              "text": "HTMLElement",
+              "canonicalReference": "!HTMLElement:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | null) => void"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "focusElement",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 4
+          }
+        }
+      ]
+    }
+  ]
+}
