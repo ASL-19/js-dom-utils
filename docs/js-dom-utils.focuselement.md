@@ -6,7 +6,7 @@
 
 Focus a DOM element.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 focusElement: (element: HTMLElement | null) => void

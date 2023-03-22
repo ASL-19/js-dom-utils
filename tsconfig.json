@@ -1,17 +1,12 @@
 {
-  "compilerOptions": {
-    "declaration": true,
-    "declarationMap": true,
-    "esModuleInterop": true,
-    "jsx": "preserve",
-    "module": "CommonJS",
-    "moduleResolution": "Node",
-    "noImplicitAny": true,
-    "outDir": "dist/cjs",
-    "target": "ES5"
-  },
+  "extends": "@asl-19/shared-package-configs/tsconfig-base.json",
   "include": [
-    "src/**/*",
-    "*.js"
+    "*.js",
+    "*.ts",
+    ".eslintrc.js",
+    "src/**/*.ts*"
   ],
+  "compilerOptions": {
+    "outDir": "dist"
+  }
 }

@@ -6,7 +6,6 @@
  * @packageDocumentation
  */
 
-
 /**
  * Focus a DOM element.
  *

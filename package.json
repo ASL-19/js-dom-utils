@@ -9,33 +9,43 @@
   },
   "license": "GPL-3.0-or-later",
   "repository": "ASL-19/js-dom-utils",
-  "engines": {
-    "node": ">= 12"
-  },
   "files": [
     "dist/**/*.js",
     "types/**/*.d.ts"
   ],
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "types": "types/js-dom-utils.public.d.ts",
+  "types": "types/js-dom-utils.d.ts",
   "sideEffects": false,
   "scripts": {
+    "api-documenter:update": "api-documenter markdown --input-folder ./api-extractor --output-folder ./docs",
     "api-extractor:check": "api-extractor run --verbose",
     "api-extractor:update": "api-extractor run --local --verbose",
-    "api-documenter:update": "api-documenter markdown --input-folder ./api-extractor --output-folder ./docs",
-    "build": "tsc -p tsconfig-cjs.json && tsc -p tsconfig-esm.json",
-    "build-and-update-api": "yarn build && yarn api-extractor:update && yarn api-documenter:update",
+    "build": "npm-run-all -l -s clean-dist -p build-cjs build-esm",
+    "build-and-update-api": "run-s -l build api-extractor:update api-documenter:update",
+    "build-check-and-lint": "run-s -l build lint",
+    "build-cjs": "tsc --project tsconfig-cjs.json",
+    "build-esm": "tsc --project tsconfig-esm.json",
+    "clean-dist": "rm -rf dist/*",
     "eslint": "eslint . --ext js,ts",
-    "prepublishOnly": "yarn build"
+    "lint": "run-s -l api-extractor:check eslint prettier-check type-check",
+    "prepublishOnly": "npm run build",
+    "prettier-check": "prettier --check .",
+    "prettier-write": "prettier --write .",
+    "npm-check-updates": "npm-check-updates",
+    "tsc": "tsc",
+    "type-check": "tsc --noEmit"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@asl-19/eslint-config": "^0.3.0",
-    "@microsoft/api-documenter": "^7.9.15",
-    "@microsoft/api-extractor": "^7.10.4",
-    "eslint": "^7.11.0",
-    "prettier": "^2.1.2",
-    "typescript": "^4.0.3"
+    "@asl-19/eslint-config": "^0.7.1",
+    "@asl-19/shared-package-configs": "^0.1.1",
+    "@microsoft/api-documenter": "^7.21.6",
+    "@microsoft/api-extractor": "^7.34.4",
+    "eslint": "^8.36.0",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "npm-check-updates": "^16.7.13",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.6",
+    "typescript": "^5.0.2"
   }
 }

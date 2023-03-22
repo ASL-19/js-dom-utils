@@ -4,9 +4,9 @@
 
 ### Changes
 
-* Add eslint-plugin-tsdoc [[#2](https://github.com/ASL-19/js-dom-utils/pull/2)]
-* Switch to @asl-19/eslint-config, upgrade dependencies [[#4](https://github.com/ASL-19/js-dom-utils/pull/4)]
-* Upgrade dependencies [[#6](https://github.com/ASL-19/js-dom-utils/pull/6)]
+- Add eslint-plugin-tsdoc [[#2](https://github.com/ASL-19/js-dom-utils/pull/2)]
+- Switch to @asl-19/eslint-config, upgrade dependencies [[#4](https://github.com/ASL-19/js-dom-utils/pull/4)]
+- Upgrade dependencies [[#6](https://github.com/ASL-19/js-dom-utils/pull/6)]
 
 ## 0.1.2 [2020-06-02]
 
