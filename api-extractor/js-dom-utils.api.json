@@ -1,20 +1,200 @@
 {
   "metadata": {
     "toolPackage": "@microsoft/api-extractor",
-    "toolVersion": "7.10.4",
-    "schemaVersion": 1003,
-    "oldestForwardsCompatibleVersion": 1001
+    "toolVersion": "7.34.4",
+    "schemaVersion": 1011,
+    "oldestForwardsCompatibleVersion": 1001,
+    "tsdocConfig": {
+      "$schema": "https://developer.microsoft.com/json-schemas/tsdoc/v0/tsdoc.schema.json",
+      "noStandardTags": true,
+      "tagDefinitions": [
+        {
+          "tagName": "@alpha",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@beta",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@defaultValue",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@decorator",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@deprecated",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@eventProperty",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@example",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@experimental",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@inheritDoc",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@internal",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@label",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@link",
+          "syntaxKind": "inline",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@override",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@packageDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@param",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@privateRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@public",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@readonly",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@remarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@returns",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@sealed",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@see",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@throws",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@typeParam",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@virtual",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@betaDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@internalRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@preapproved",
+          "syntaxKind": "modifier"
+        }
+      ],
+      "supportForTags": {
+        "@alpha": true,
+        "@beta": true,
+        "@defaultValue": true,
+        "@decorator": true,
+        "@deprecated": true,
+        "@eventProperty": true,
+        "@example": true,
+        "@experimental": true,
+        "@inheritDoc": true,
+        "@internal": true,
+        "@label": true,
+        "@link": true,
+        "@override": true,
+        "@packageDocumentation": true,
+        "@param": true,
+        "@privateRemarks": true,
+        "@public": true,
+        "@readonly": true,
+        "@remarks": true,
+        "@returns": true,
+        "@sealed": true,
+        "@see": true,
+        "@throws": true,
+        "@typeParam": true,
+        "@virtual": true,
+        "@betaDocumentation": true,
+        "@internalRemarks": true,
+        "@preapproved": true
+      },
+      "reportUnsupportedHtmlElements": false
+    }
   },
   "kind": "Package",
   "canonicalReference": "@asl-19/js-dom-utils!",
   "docComment": "/**\n * A collection of plain JavaScript DOM utility functions.\n *\n * These functions don’t rely on React, or React Native APIs.\n *\n * @packageDocumentation\n */\n",
   "name": "@asl-19/js-dom-utils",
+  "preserveMemberOrder": false,
   "members": [
     {
       "kind": "EntryPoint",
       "canonicalReference": "@asl-19/js-dom-utils!",
       "name": "",
+      "preserveMemberOrder": false,
       "members": [
+        {
+          "kind": "Variable",
+          "canonicalReference": "@asl-19/js-dom-utils!announce:var",
+          "docComment": "/**\n * Trigger screen reader announcement using hidden `aria-live` region.\n *\n * @remarks\n *\n * See:\n *\n * - https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions\n *\n * Based on:\n *\n * - {@link https://a11y-guidelines.orange.com/en/web/components-examples/make-a-screen-reader-talk/}\n *\n * - {@link https://github.com/adobe/react-spectrum/blob/main/packages/\\@react-aria/live-announcer/src/LiveAnnouncer.tsx}\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "announce: "
+            },
+            {
+              "kind": "Content",
+              "text": "({ priority, text, }: {\n    priority: \"assertive\" | \"polite\";\n    text: string;\n}) => void"
+            }
+          ],
+          "fileUrlPath": "src/announce.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "announce",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
         {
           "kind": "Variable",
           "canonicalReference": "@asl-19/js-dom-utils!focusElement:var",
@@ -35,14 +215,25 @@
             },
             {
               "kind": "Content",
-              "text": " | null) => void"
+              "text": ", options?: "
+            },
+            {
+              "kind": "Reference",
+              "text": "FocusOptions",
+              "canonicalReference": "!FocusOptions:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ") => void"
             }
           ],
+          "fileUrlPath": "src/focusElement.ts",
+          "isReadonly": true,
           "releaseTag": "Public",
           "name": "focusElement",
           "variableTypeTokenRange": {
             "startIndex": 1,
-            "endIndex": 4
+            "endIndex": 6
           }
         }
       ]

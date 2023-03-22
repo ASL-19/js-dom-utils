@@ -6,10 +6,10 @@
 
 Focus a DOM element.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
-focusElement: (element: HTMLElement | null) => void
+focusElement: (element: HTMLElement, options?: FocusOptions) => void
 ```
 
 ## Remarks

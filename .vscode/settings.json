@@ -3,6 +3,7 @@
     "destructure",
     "focusable",
     "heaslip",
+    "rushstack",
     "tabindex",
     "tsdoc",
     "unscoped"
@@ -10,7 +11,6 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "eslint.enable": true,
   "eslint.validate": [
     "javascript",
     "typescript"
@@ -18,15 +18,25 @@
   "files.associations": {
     "api-extractor.json": "jsonc"
   },
+  "editor.formatOnSave": false,
+  "editor.tabSize": 2,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "redhat.telemetry.enabled": false,
+  "rewrap.reformat": true,
+  "rewrap.wrappingColumn": 80,
   "search.exclude": {
-    ".yarn/releases/**/*": true,
-    ".yarnrc": true,
     "api-extractor/**/*": true,
     "CHANGELOG": true,
     "docs/**/*": true,
     "LICENSE": true,
-    "types/**/*": true,
-    "yarn.lock": true
+    "package-lock.json": true,
+    "types/**/*": true
   },
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "[javascript][json][jsonc][markdown][typescript][yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  }
 }

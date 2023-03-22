@@ -7,7 +7,7 @@ See [`docs/js-dom-utils.md`](./docs/js-dom-utils.md) for API documentation.
 ## How to install
 
 ```sh
-yarn add @asl-19/js-dom-utils
+npm install @asl-19/js-dom-utils
 ```
 
 ## Compatibility

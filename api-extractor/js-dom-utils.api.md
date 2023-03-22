@@ -5,7 +5,12 @@
 ```ts
 
 // @public
-export const focusElement: (element: HTMLElement | null) => void;
+export const announce: ({ priority, text, }: {
+    priority: "assertive" | "polite";
+    text: string;
+}) => void;
 
+// @public
+export const focusElement: (element: HTMLElement, options?: FocusOptions) => void;
 
 ```

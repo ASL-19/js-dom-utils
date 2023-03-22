@@ -12,5 +12,6 @@ These functions don’t rely on React, or React Native APIs.
 
 |  Variable | Description |
 |  --- | --- |
+|  [announce](./js-dom-utils.announce.md) | Trigger screen reader announcement using hidden <code>aria-live</code> region. |
 |  [focusElement](./js-dom-utils.focuselement.md) | Focus a DOM element. |
 
