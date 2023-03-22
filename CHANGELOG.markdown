@@ -1,5 +1,10 @@
 # @asl-19/js-dom-utils changelog
 
+## 0.2.0 [2023-03-22]
+
+- Updated `focusElement` to add options argument
+- Added `announce`
+
 ## [0.1.3](https://github.com/ASL-19/js-dom-utils/issues?q=is%3Aclosed+milestone%3A0.1.3) [2020-10-21]
 
 ### Changes
