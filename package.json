@@ -29,7 +29,7 @@
     "clean-dist": "rm -rf dist/*",
     "eslint": "eslint . --ext js,ts",
     "lint": "run-s -l api-extractor:check eslint prettier-check type-check",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "npm run build-check-and-lint",
     "prettier-check": "prettier --check .",
     "prettier-write": "prettier --write .",
     "npm-check-updates": "npm-check-updates",
