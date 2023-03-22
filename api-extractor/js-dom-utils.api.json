@@ -174,6 +174,29 @@
       "members": [
         {
           "kind": "Variable",
+          "canonicalReference": "@asl-19/js-dom-utils!announce:var",
+          "docComment": "/**\n * Trigger screen reader announcement using hidden `aria-live` region.\n *\n * @remarks\n *\n * See:\n *\n * - https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions\n *\n * Based on:\n *\n * - {@link https://a11y-guidelines.orange.com/en/web/components-examples/make-a-screen-reader-talk/}\n *\n * - {@link https://github.com/adobe/react-spectrum/blob/main/packages/\\@react-aria/live-announcer/src/LiveAnnouncer.tsx}\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "announce: "
+            },
+            {
+              "kind": "Content",
+              "text": "({ priority, text, }: {\n    priority: \"assertive\" | \"polite\";\n    text: string;\n}) => void"
+            }
+          ],
+          "fileUrlPath": "src/announce.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "announce",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "Variable",
           "canonicalReference": "@asl-19/js-dom-utils!focusElement:var",
           "docComment": "/**\n * Focus a DOM element.\n *\n * @remarks\n *\n * Adds tabindex=\"-1\" to element to make it focusable (removed on blur).\n *\n * @public\n */\n",
           "excerptTokens": [
@@ -192,7 +215,16 @@
             },
             {
               "kind": "Content",
-              "text": " | null) => void"
+              "text": ", options?: "
+            },
+            {
+              "kind": "Reference",
+              "text": "FocusOptions",
+              "canonicalReference": "!FocusOptions:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ") => void"
             }
           ],
           "fileUrlPath": "src/focusElement.ts",
@@ -201,7 +233,7 @@
           "name": "focusElement",
           "variableTypeTokenRange": {
             "startIndex": 1,
-            "endIndex": 4
+            "endIndex": 6
           }
         }
       ]

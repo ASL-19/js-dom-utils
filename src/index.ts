@@ -6,4 +6,5 @@
  * @packageDocumentation
  */
 
+export { default as announce } from "./announce";
 export { default as focusElement } from "./focusElement";

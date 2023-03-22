@@ -7,6 +7,25 @@
  */
 
 /**
+ * Trigger screen reader announcement using hidden `aria-live` region.
+ *
+ * @remarks
+ * See:
+ *
+ * - https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
+ *
+ * Based on:
+ *
+ * - {@link https://a11y-guidelines.orange.com/en/web/components-examples/make-a-screen-reader-talk/}
+ *
+ * - {@link https://github.com/adobe/react-spectrum/blob/main/packages/\@react-aria/live-announcer/src/LiveAnnouncer.tsx}
+ */
+export declare const announce: ({ priority, text, }: {
+    priority: "assertive" | "polite";
+    text: string;
+}) => void;
+
+/**
  * Focus a DOM element.
  *
  * @remarks
@@ -14,6 +33,6 @@
  *
  * @public
  */
-export declare const focusElement: (element: HTMLElement | null) => void;
+export declare const focusElement: (element: HTMLElement, options?: FocusOptions) => void;
 
 export { }
