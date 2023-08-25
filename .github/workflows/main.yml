@@ -17,4 +17,4 @@ jobs:
         run: npm install
 
       - name: Build, check, and lint
-        run: npm run build-check-and-lint
+        run: npm run build-lint-test
