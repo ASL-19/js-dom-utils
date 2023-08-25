@@ -1,12 +1,15 @@
 {
-  "extends": "@asl-19/shared-package-configs/tsconfig-base.json",
+  "extends": "@asl-19/shared-package-configs/tsconfig-cjs.json",
+  "compilerOptions": {
+    "incremental": true,
+    "outDir": "dist",
+    "target": "ES2019",
+    "tsBuildInfoFile": ".tsbuildinfo"
+  },
   "include": [
     "*.js",
     "*.ts",
     ".eslintrc.js",
     "src/**/*.ts*"
-  ],
-  "compilerOptions": {
-    "outDir": "dist"
-  }
+  ]
 }
