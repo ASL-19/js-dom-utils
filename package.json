@@ -17,9 +17,8 @@
   "types": "types/js-dom-utils.d.ts",
   "sideEffects": false,
   "scripts": {
-    "api-documenter-update": "api-documenter markdown --input-folder ./api-extractor --output-folder ./docs",
     "api-extractor-check": "api-extractor run --verbose",
-    "api-extractor-update": "api-extractor run --local --verbose",
+    "api-extractor-update": "api-extractor run --local --verbose && api-documenter markdown --input-folder ./api-extractor --output-folder ./docs",
     "build-lint-test": "run-s -l tsc-build lint-test",
     "rm-dist": "rm -rf dist",
     "dev": "run-s package-changed tsc-build-watch",
@@ -34,12 +33,11 @@
     "npm-check-updates": "npm-check-updates",
     "tsc-build": "tsc --project tsconfig-build.json",
     "tsc-build-watch": "tsc --project tsconfig-build.json --watch",
-    "tsc-check": "tsc --noEmit",
-    "update-types-and-docs": "run-s -l api-extractor-update api-documenter-update"
+    "tsc-check": "tsc --noEmit"
   },
   "devDependencies": {
     "@asl-19/eslint-config": "^0.8.0",
-    "@asl-19/shared-package-configs": "^0.1.1",
+    "@asl-19/shared-package-configs": "^0.2.0",
     "@microsoft/api-documenter": "^7.22.33",
     "@microsoft/api-extractor": "^7.36.4",
     "@types/node": "^18.17.11",

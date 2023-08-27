@@ -1,10 +1,7 @@
 {
   "extends": "@asl-19/shared-package-configs/tsconfig-cjs.json",
   "compilerOptions": {
-    "incremental": true,
-    "outDir": "dist",
-    "target": "ES2019",
-    "tsBuildInfoFile": ".tsbuildinfo"
+    "outDir": "dist"
   },
   "include": [
     "*.js",
