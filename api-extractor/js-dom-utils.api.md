@@ -11,6 +11,6 @@ export const announce: ({ priority, text, }: {
 }) => void;
 
 // @public
-export const focusElement: (element: HTMLElement, options?: FocusOptions) => void;
+export const focusElement: (element: HTMLElement | null, options?: FocusOptions) => void;
 
 ```

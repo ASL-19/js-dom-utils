@@ -215,7 +215,7 @@
             },
             {
               "kind": "Content",
-              "text": ", options?: "
+              "text": " | null, options?: "
             },
             {
               "kind": "Reference",
