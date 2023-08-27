@@ -13,9 +13,14 @@ const onElementBlur = (event: FocusEvent) => {
  * @public
  */
 const focusElement = (
-  element: HTMLElement,
+  element: HTMLElement | null,
   options: FocusOptions = { preventScroll: false },
 ) => {
+  if (!(element instanceof HTMLElement)) {
+    console.error("Couldn’t focus element:", element);
+    return;
+  }
+
   element.setAttribute("tabindex", "-1");
   element.addEventListener("blur", onElementBlur);
   element.focus(options);

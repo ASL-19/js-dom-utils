@@ -33,6 +33,6 @@ export declare const announce: ({ priority, text, }: {
  *
  * @public
  */
-export declare const focusElement: (element: HTMLElement, options?: FocusOptions) => void;
+export declare const focusElement: (element: HTMLElement | null, options?: FocusOptions) => void;
 
 export { }
