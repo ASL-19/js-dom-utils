@@ -5,6 +5,7 @@
     "heaslip",
     "rushstack",
     "tabindex",
+    "tsbuildinfo",
     "tsdoc",
     "unscoped"
   ],
@@ -20,6 +21,9 @@
   },
   "editor.formatOnSave": false,
   "editor.tabSize": 2,
+  "editor.unicodeHighlight.allowedCharacters": {
+    "’": true
+  },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,

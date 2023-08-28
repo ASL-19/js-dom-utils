@@ -9,7 +9,7 @@ Focus a DOM element.
 **Signature:**
 
 ```typescript
-focusElement: (element: HTMLElement, options?: FocusOptions) => void
+focusElement: (element: HTMLElement | null, options?: FocusOptions) => void
 ```
 
 ## Remarks
