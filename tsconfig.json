@@ -1,5 +1,5 @@
 {
-  "extends": "@asl-19/shared-package-configs/tsconfig-cjs.json",
+  "extends": "@asl-19/shared-package-configs/tsconfig-base.json",
   "compilerOptions": {
     "outDir": "dist"
   },

@@ -3,5 +3,6 @@
  */
 {
   "$schema": "https://developer.microsoft.com/json-schemas/api-extractor/v7/api-extractor.schema.json",
-  "extends": "@asl-19/shared-package-configs/api-extractor.json"
+  "extends": "@asl-19/shared-package-configs/api-extractor.json",
+  "mainEntryPointFilePath": "<projectFolder>/dist/esm/index.d.ts"
 }
