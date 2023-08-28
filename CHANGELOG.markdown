@@ -1,5 +1,9 @@
 # @asl-19/js-dom-utils changelog
 
+## [0.2.1](https://github.com/ASL-19/js-dom-utils/pulls?q=is%3Apr+milestone%3A0.2.1) [2023-08-28]
+
+- Allowed null element to be passed to `focusElement` (will now log error if element is null) [[#14](https://github.com/ASL-19/js-dom-utils/pull/14)]
+
 ## 0.2.0 [2023-03-22]
 
 - Updated `focusElement` to add options argument
