@@ -17,7 +17,10 @@ const focusElement = (
   options: FocusOptions = { preventScroll: false },
 ) => {
   if (!(element instanceof HTMLElement)) {
-    console.error("Couldn’t focus element:", element);
+    console.error(
+      "[focusElement] Not focussing because provided element isn’t HTMLElement:",
+      element,
+    );
     return;
   }
 
