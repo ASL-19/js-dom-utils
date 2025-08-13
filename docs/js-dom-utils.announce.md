@@ -2,7 +2,7 @@
 
 [Home](./index.md) &gt; [@asl-19/js-dom-utils](./js-dom-utils.md) &gt; [announce](./js-dom-utils.announce.md)
 
-## announce variable
+## announce() function
 
 Trigger screen reader announcement using hidden `aria-live` region.
 
@@ -14,6 +14,44 @@ announce: ({ priority, text, }: {
     text: string;
 }) => void
 ```
+
+## Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+{ priority, text, }
+
+
+</td><td>
+
+{ priority: "assertive" \| "polite"; text: string; }
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+
+**Returns:**
+
+void
 
 ## Remarks
 
