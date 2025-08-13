@@ -14,11 +14,11 @@
     "dist/**/*.js",
     "dist/**/*.d.ts"
   ],
-  "main": "dist/cjs/index.js",
   "exports": {
     "types": "./dist/index.d.ts",
     "default": "./dist/index.js"
   },
+  "sideEffects": false,
   "scripts": {
     "api-extractor-check": "api-extractor run --verbose",
     "api-extractor-update": "api-extractor run --local --verbose && api-documenter markdown --input-folder ./api-extractor --output-folder ./docs",
@@ -51,8 +51,5 @@
     "package-changed": "^3.0.0",
     "prettier": "^3.6.2",
     "typescript": "^5.9.2"
-  },
-  "overrides": {
-    "@arthurgeron/eslint-plugin-react-usememo": "2.4.4"
   }
 }
