@@ -3,11 +3,13 @@
     "destructure",
     "focusable",
     "heaslip",
+    "packagehash",
     "rushstack",
     "tabindex",
     "tsbuildinfo",
     "tsdoc",
-    "unscoped"
+    "unscoped",
+    "yalc"
   ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
@@ -35,8 +37,7 @@
     "CHANGELOG": true,
     "docs/**/*": true,
     "LICENSE": true,
-    "package-lock.json": true,
-    "types/**/*": true
+    "package-lock.json": true
   },
   "typescript.tsdk": "node_modules/typescript/lib",
   "[javascript][json][jsonc][markdown][typescript][yaml]": {
