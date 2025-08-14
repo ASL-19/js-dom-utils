@@ -4,11 +4,10 @@
     "checkJs": true,
     "declaration": true,
     "incremental": true,
-    "module": "esnext",
+    "module": "preserve",
     "outDir": "dist",
     "strict": true,
-    "target": "es2021",
-    "moduleResolution": "Bundler"
+    "target": "es2021"
   },
   "include": [
     "*.js",
