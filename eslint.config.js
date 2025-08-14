@@ -1,7 +1,6 @@
 import asl19 from "@asl-19/eslint-config";
 import { defineConfig } from "eslint/config";
 
-// TODO: Remove once @asl-19/eslint-config is fixed
 const typedAsl19 = /** @type {import("@asl-19/eslint-config")["default"]} */ (
   asl19
 );
