@@ -8,10 +8,40 @@ A collection of plain JavaScript DOM utility functions.
 
 These functions don’t rely on React, or React Native APIs.
 
-## Variables
+## Functions
 
-|  Variable | Description |
-|  --- | --- |
-|  [announce](./js-dom-utils.announce.md) | Trigger screen reader announcement using hidden <code>aria-live</code> region. |
-|  [focusElement](./js-dom-utils.focuselement.md) | Focus a DOM element. |
+<table><thead><tr><th>
+
+Function
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[announce({ priority, text, })](./js-dom-utils.announce.md)
+
+
+</td><td>
+
+Trigger screen reader announcement using hidden `aria-live` region.
+
+
+</td></tr>
+<tr><td>
+
+[focusElement(element, options)](./js-dom-utils.focuselement.md)
+
+
+</td><td>
+
+Focus a DOM element.
+
+
+</td></tr>
+</tbody></table>
 
