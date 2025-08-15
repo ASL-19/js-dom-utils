@@ -3,6 +3,19 @@
  */
 {
   "$schema": "https://developer.microsoft.com/json-schemas/api-extractor/v7/api-extractor.schema.json",
-  "extends": "@asl-19/shared-package-configs/api-extractor.json",
-  "mainEntryPointFilePath": "<projectFolder>/dist/esm/index.d.ts"
+  "mainEntryPointFilePath": "<projectFolder>/dist/index.d.ts",
+  "apiReport": {
+    "enabled": true,
+    "reportFolder": "<projectFolder>/api-extractor"
+  },
+  "docModel": {
+    "enabled": true,
+    "apiJsonFilePath": "<projectFolder>/api-extractor/js-dom-utils.api.json"
+  },
+  "dtsRollup": {
+    "enabled": false
+  },
+  "tsdocMetadata": {
+    "enabled": false
+  }
 }

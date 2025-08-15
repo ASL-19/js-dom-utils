@@ -1,12 +1,18 @@
 {
-  "extends": "@asl-19/shared-package-configs/tsconfig-base.json",
   "compilerOptions": {
-    "outDir": "dist"
+    "allowJs": true,
+    "checkJs": true,
+    "declaration": true,
+    "incremental": true,
+    "module": "preserve",
+    "outDir": "dist",
+    "strict": true,
+    "target": "es2021"
   },
   "include": [
     "*.js",
+    "*.mjs",
     "*.ts",
-    ".eslintrc.js",
     "src/**/*.ts*"
   ]
 }

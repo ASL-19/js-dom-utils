@@ -2,7 +2,7 @@
 
 [Home](./index.md) &gt; [@asl-19/js-dom-utils](./js-dom-utils.md) &gt; [focusElement](./js-dom-utils.focuselement.md)
 
-## focusElement variable
+## focusElement() function
 
 Focus a DOM element.
 
@@ -11,6 +11,60 @@ Focus a DOM element.
 ```typescript
 focusElement: (element: HTMLElement | null, options?: FocusOptions) => void
 ```
+
+## Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+element
+
+
+</td><td>
+
+HTMLElement \| null
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+options
+
+
+</td><td>
+
+FocusOptions
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+</tbody></table>
+
+**Returns:**
+
+void
 
 ## Remarks
 

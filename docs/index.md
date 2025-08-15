@@ -6,7 +6,29 @@
 
 ## Packages
 
-|  Package | Description |
-|  --- | --- |
-|  [@asl-19/js-dom-utils](./js-dom-utils.md) | <p>A collection of plain JavaScript DOM utility functions.</p><p>These functions don’t rely on React, or React Native APIs.</p> |
+<table><thead><tr><th>
+
+Package
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[@asl-19/js-dom-utils](./js-dom-utils.md)
+
+
+</td><td>
+
+A collection of plain JavaScript DOM utility functions.
+
+These functions don’t rely on React, or React Native APIs.
+
+
+</td></tr>
+</tbody></table>
 
