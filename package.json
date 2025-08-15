@@ -1,6 +1,6 @@
 {
   "name": "@asl-19/js-dom-utils",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "Shared JavaScript DOM utility functions for ASL19 projects",
   "type": "module",
   "author": {

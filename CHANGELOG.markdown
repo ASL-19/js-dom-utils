@@ -1,5 +1,10 @@
 # @asl-19/js-dom-utils changelog
 
+## [1.0.0](https://github.com/ASL-19/js-dom-utils/pulls?q=is%3Apr+milestone%3A1.0.0) [2025-08-15]
+
+- Update dependencies [[#18](https://github.com/ASL-19/js-dom-utils/pull/18)]
+- Migrate to ESM [[#19](https://github.com/ASL-19/js-dom-utils/pull/19)]
+
 ## [0.2.1](https://github.com/ASL-19/js-dom-utils/pulls?q=is%3Apr+milestone%3A0.2.1) [2023-08-28]
 
 - Allowed null element to be passed to `focusElement` (will now log error if element is null) [[#14](https://github.com/ASL-19/js-dom-utils/pull/14)]
