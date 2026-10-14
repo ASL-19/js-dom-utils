@@ -9,7 +9,10 @@
     "url": "https://asl19.org/"
   },
   "license": "GPL-3.0-or-later",
-  "repository": "ASL-19/js-dom-utils",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ASL-19/js-dom-utils.git"
+  },
   "files": [
     "dist/**/*.js",
     "dist/**/*.d.ts"
