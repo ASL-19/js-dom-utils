@@ -1,5 +1,13 @@
+// Bundlers typically replace process.env.NODE_ENV. Declared here instead of
+// including Node types, since this is browser code.
+declare const process: undefined | { env: { NODE_ENV?: string } };
+
 /**
  * Trigger screen reader announcement using hidden `aria-live` region.
+ *
+ * @param options - Announcement options
+ * @param options.priority - `aria-live` priority of the announcement
+ * @param options.text - Text to announce
  *
  * @remarks
  * See:
@@ -30,16 +38,17 @@ const announce = ({
 
   const containerId = `asl19-${priority}-announcements`;
 
-  let containerElement = document.getElementById(containerId);
+  const existingContainerElement = document.getElementById(containerId);
+  const containerElement =
+    existingContainerElement ?? document.createElement("div");
 
-  if (!containerElement) {
-    containerElement = document.createElement("div");
+  if (!existingContainerElement) {
     containerElement.setAttribute("aria-live", priority);
     containerElement.setAttribute("id", containerId);
     containerElement.setAttribute("role", "log");
 
     containerElement.style.border = "0";
-    containerElement.style.clip = "rect(0 0 0 0)";
+    containerElement.style.clipPath = "inset(50%)";
     containerElement.style.height = "1px";
     containerElement.style.margin = "-1px";
     containerElement.style.overflow = "hidden";
@@ -52,19 +61,33 @@ const announce = ({
   }
 
   const announcementElement = document.createElement("div");
-  announcementElement.innerHTML = text;
+  announcementElement.textContent = text;
 
-  containerElement.appendChild(announcementElement);
+  const appendAnnouncement = () => {
+    containerElement.appendChild(announcementElement);
 
-  if (process?.env?.NODE_ENV === "development") {
-    console.info(`${priority} announcement: ${text}`);
+    window.setTimeout(() => {
+      announcementElement.remove();
+    }, 3000);
+  };
+
+  // Screen readers may ignore changes to a live region that was just added to
+  // the DOM, so give them a moment to register a new container
+  if (existingContainerElement) {
+    appendAnnouncement();
+  } else {
+    window.setTimeout(appendAnnouncement, 100);
   }
 
-  window.setTimeout(function () {
-    if (containerElement) {
-      containerElement.removeChild(announcementElement);
-    }
-  }, 3000);
+  if (
+    // Optional chaining (process?.env) would throw a ReferenceError in
+    // browsers, where process isn’t declared
+    // eslint-disable-next-line @typescript-eslint/prefer-optional-chain
+    typeof process !== "undefined" &&
+    process.env.NODE_ENV === "development"
+  ) {
+    console.info(`${priority} announcement: ${text}`);
+  }
 };
 
 export default announce;
