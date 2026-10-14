@@ -1,5 +1,13 @@
+// Bundlers typically replace process.env.NODE_ENV. Declared here instead of
+// including Node types, since this is browser code.
+declare const process: undefined | { env: { NODE_ENV?: string } };
+
 /**
  * Trigger screen reader announcement using hidden `aria-live` region.
+ *
+ * @param options - Announcement options
+ * @param options.priority - `aria-live` priority of the announcement
+ * @param options.text - Text to announce
  *
  * @remarks
  * See:
@@ -72,6 +80,9 @@ const announce = ({
   }
 
   if (
+    // Optional chaining (process?.env) would throw a ReferenceError in
+    // browsers, where process isn’t declared
+    // eslint-disable-next-line @typescript-eslint/prefer-optional-chain
     typeof process !== "undefined" &&
     process.env.NODE_ENV === "development"
   ) {

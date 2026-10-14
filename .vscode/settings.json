@@ -1,13 +1,13 @@
 {
   "cSpell.words": [
     "destructure",
+    "EBADDEVENGINES",
     "focusable",
     "heaslip",
-    "packagehash",
-    "rushstack",
+    "pinact",
     "tabindex",
-    "tsbuildinfo",
     "tsdoc",
+    "typedoc",
     "unscoped",
     "yalc"
   ],
@@ -18,9 +18,6 @@
     "javascript",
     "typescript"
   ],
-  "files.associations": {
-    "api-extractor.json": "jsonc"
-  },
   "editor.formatOnSave": false,
   "editor.tabSize": 2,
   "editor.unicodeHighlight.allowedCharacters": {
@@ -33,7 +30,6 @@
   "rewrap.reformat": true,
   "rewrap.wrappingColumn": 80,
   "search.exclude": {
-    "api-extractor/**/*": true,
     "CHANGELOG": true,
     "docs/**/*": true,
     "LICENSE": true,
