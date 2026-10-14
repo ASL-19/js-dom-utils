@@ -1,4 +1,5 @@
 .packagehash
+.DS_Store
 .yalc/
 dist/
 node_modules/
