@@ -1,6 +1,6 @@
 # @asl-19/js-dom-utils changelog
 
-## Unreleased
+## 1.1.0 [2026-10-14]
 
 - `announce`: Insert text with `textContent` instead of `innerHTML`, so announcement text is no longer parsed as HTML
 - `announce`: Fix `ReferenceError` in browsers without a `process` global
