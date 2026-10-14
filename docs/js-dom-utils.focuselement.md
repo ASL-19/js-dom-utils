@@ -68,5 +68,5 @@ void
 
 ## Remarks
 
-Adds tabindex="-1" to element to make it focusable (removed on blur).
+If the element isn’t already focusable, adds tabindex="-1" to make it focusable (removed on blur).
 

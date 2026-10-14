@@ -216,7 +216,7 @@
         {
           "kind": "Function",
           "canonicalReference": "@asl-19/js-dom-utils!focusElement:function(1)",
-          "docComment": "/**\n * Focus a DOM element.\n *\n * @remarks\n *\n * Adds tabindex=\"-1\" to element to make it focusable (removed on blur).\n *\n * @public\n */\n",
+          "docComment": "/**\n * Focus a DOM element.\n *\n * @remarks\n *\n * If the element isn’t already focusable, adds tabindex=\"-1\" to make it focusable (removed on blur).\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
