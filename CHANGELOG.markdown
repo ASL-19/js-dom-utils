@@ -2,7 +2,13 @@
 
 ## Unreleased
 
-Development tooling only. The compiled JavaScript is unchanged, and `announce`’s type declarations gain parameter descriptions.
+- `announce`: Insert text with `textContent` instead of `innerHTML`, so announcement text is no longer parsed as HTML
+- `announce`: Fix `ReferenceError` in browsers without a `process` global
+- `announce`: Delay the first announcement 100 ms after creating its live region (screen readers may ignore changes to a just-inserted live region), and remove announcements after 3 seconds
+- `announce`: Replace deprecated `clip` with `clip-path`, and document parameters
+- `focusElement`: Only add `tabindex="-1"` if the element isn’t already focusable, rather than overwriting an existing `tabindex` and removing it on blur
+
+### Development
 
 - Replace API Extractor and API Documenter with TypeDoc
 - Add Vitest tests (happy-dom) for `announce` and `focusElement`
