@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { readFileSync } from "node:fs";
-import { describe, expect, it } from "vitest";
+import { expect, test } from "vitest";
 
 // Each gate fails open silently if its line goes missing, so assert they're all
 // present. See AGENTS.md "npm supply-chain gates". Paths are relative to the
@@ -25,32 +25,30 @@ const packageJson = JSON.parse(readFileSync("package.json", "utf8")) as {
   scripts?: Record<string, string>;
 };
 
-describe("npm supply-chain gates", () => {
-  it.each([
-    ["min-release-age", "1"],
-    ["min-release-age-exclude[]", "@asl-19/*"],
-    ["allow-git", "none"],
-    ["allow-remote", "none"],
-    ["strict-allow-scripts", "true"],
-    ["engine-strict", "true"],
-  ])(".npmrc sets %s=%s exactly once", (key, value) => {
-    expect(npmrcValuesByKey.get(key)).toEqual([value]);
-  });
-
-  // An older npm ignores every key above
-  it("devEngines requires npm 11.17 or later", () => {
-    expect(packageJson.devEngines?.packageManager).toEqual({
-      name: "npm",
-      onFail: "error",
-      version: ">=11.17.0",
-    });
-  });
-
-  // allowScripts covers dependencies only, not this package's own scripts
-  it.each(["preinstall", "install", "postinstall", "prepare"])(
-    "package.json has no %s script",
-    (script) => {
-      expect(packageJson.scripts).not.toHaveProperty(script);
-    },
-  );
+test.each([
+  ["min-release-age", "1"],
+  ["min-release-age-exclude[]", "@asl-19/*"],
+  ["allow-git", "none"],
+  ["allow-remote", "none"],
+  ["strict-allow-scripts", "true"],
+  ["engine-strict", "true"],
+])(".npmrc sets %s=%s exactly once", (key, value) => {
+  expect(npmrcValuesByKey.get(key)).toEqual([value]);
 });
+
+// An older npm ignores every key above
+test("devEngines requires npm 11.17 or later", () => {
+  expect(packageJson.devEngines?.packageManager).toEqual({
+    name: "npm",
+    onFail: "error",
+    version: ">=11.17.0",
+  });
+});
+
+// allowScripts covers dependencies only, not this package's own scripts
+test.each(["preinstall", "install", "postinstall", "prepare"])(
+  "package.json has no %s script",
+  (script) => {
+    expect(packageJson.scripts).not.toHaveProperty(script);
+  },
+);
