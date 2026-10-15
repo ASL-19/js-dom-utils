@@ -5,6 +5,7 @@
 Development tooling only:
 
 - Update ESLint to 10, @asl-19/eslint-config to 1.0 and happy-dom to 21
+- Add Are the Types Wrong? (`attw`) to `lint-test`, to check the published type declarations resolve
 
 ## 1.1.0 [2026-10-14]
 
