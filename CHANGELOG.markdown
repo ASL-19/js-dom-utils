@@ -1,5 +1,11 @@
 # @asl-19/js-dom-utils changelog
 
+## Unreleased
+
+Development tooling only:
+
+- Update ESLint to 10, @asl-19/eslint-config to 1.0 and happy-dom to 21
+
 ## 1.1.0 [2026-10-14]
 
 - `announce`: Insert text with `textContent` instead of `innerHTML`, so announcement text is no longer parsed as HTML
